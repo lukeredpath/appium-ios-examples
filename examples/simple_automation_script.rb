@@ -2,6 +2,8 @@ require_relative 'common'
 
 $driver.with_session do
   begin
+    binding.pry if ENV['console']
+    
     application = $driver.target.front_most_app
     window = application.main_window
 
@@ -24,8 +26,7 @@ $driver.with_session do
 
     catalog_menu.select_option('Sliders')
 
-    # proxy helper for sliders not yet implemented
-    slider = window.main_table_view.cells[0].element_array_proxy_for(:sliders)[0]
+    slider = window.main_table_view.cells[0].sliders.first
     assert { slider.valid? }
 
     slider.drag_to_value(1)

@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/songkick/appium-ios-driver.git
-  revision: 18ab0c110344361bccb2062c3dd86af75a79d38b
+  revision: 4c865decbaa1e197034fd06c8e251a2ab13bfb7d
   specs:
     appium-ios-driver (0.0.1)
       activesupport (~> 4.0)
@@ -69,3 +69,4 @@ PLATFORMS
 DEPENDENCIES
   appium-ios-driver!
   pry-byebug
+  wrong
